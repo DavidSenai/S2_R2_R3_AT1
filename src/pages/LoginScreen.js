@@ -5,7 +5,6 @@ import {
   View,
   TouchableOpacity,
   ImageBackground,
-  Image
 } from "react-native";
 
 // IMPORT STYLES
@@ -22,13 +21,13 @@ export default function LoginScreen() {
   const navigation = useNavigation();
 
   function isLogin() {
-const emailSemEspacos = Email.replace(/\s+/g, "");
-const senhaSemEspacos = Senha.replace(/\s+/g, "");
+    const emailSemEspacos = Email.replace(/\s+/g, "");
+    const senhaSemEspacos = Senha.replace(/\s+/g, "");
 
-if (emailSemEspacos === "DAVID" && senhaSemEspacos === "123456") {
-  console.log(emailSemEspacos, senhaSemEspacos);
-  navigation.navigate("Sobre");
-}
+    if (emailSemEspacos === "DAVID" && senhaSemEspacos === "123456") {
+      console.log(emailSemEspacos, senhaSemEspacos);
+      navigation.navigate("Sobre");
+    }
   }
 
   return (
@@ -37,8 +36,6 @@ if (emailSemEspacos === "DAVID" && senhaSemEspacos === "123456") {
       source={require("../assets/images/fundo.jpg")}
       resizeMode="cover"
     >
-      
-      
       <Text style={styles.snoopyapp}>Faça Seu Login</Text>
 
       <View style={styles.visao}>
@@ -53,7 +50,6 @@ if (emailSemEspacos === "DAVID" && senhaSemEspacos === "123456") {
           value={Email}
           onChangeText={(value) => setEmail(value)}
         />
-
       </View>
 
       <View style={styles.visao}>
@@ -74,6 +70,5 @@ if (emailSemEspacos === "DAVID" && senhaSemEspacos === "123456") {
         <Text style={styles.texto}>Entrar</Text>
       </TouchableOpacity>
     </ImageBackground>
-    
   );
 }

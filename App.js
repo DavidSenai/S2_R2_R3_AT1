@@ -1,8 +1,4 @@
 import React from "react";
-import { Text, View } from "react-native";
-
-// IMPORT STYLES
-import { styles } from "./src/styles/styles";
 
 // IMPORT PAGES
 import Home from "./src/pages/LoginScreen";

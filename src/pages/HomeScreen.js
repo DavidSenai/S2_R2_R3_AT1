@@ -1,10 +1,8 @@
-  import React from 'react';
-import { Text, StyleSheet, ImageBackground, Image } from 'react-native';
+import React from "react";
+import { Text, StyleSheet, ImageBackground, Image } from "react-native";
 // Quando importamos o useNavigation ele nos retorna uma instancia de navegação
 // Isso nos permite acessar todos os métodos referente a navegação( navigate, goBack)
 import { useNavigation } from "@react-navigation/native";
-
-import AntDesign from "@expo/vector-icons/AntDesign";
 
 export default function Sobre() {
   const navigation = useNavigation();
@@ -14,13 +12,11 @@ export default function Sobre() {
       source={require("../assets/images/fundoHome.jpg")}
       resizeMode="cover"
     >
-      
-      <Text style={styles.titulo}>Bem-vindo</Text>
-      <Text style={styles.titulo}> ao </Text>
-      <Text style={styles.titulo}>Meu App!</Text>
+      <Text style={styles.titulo}>Bem-vindo!</Text>
       <Image
-      style={styles.logo}
-      source={require("../assets/images/joia.jpg")} />
+        style={styles.logo}
+        source={require("../assets/images/joia.jpg")}
+      />
     </ImageBackground>
   );
 }
@@ -28,20 +24,18 @@ export default function Sobre() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
     justifyContent: "center",
   },
   logo: {
     width: 194,
     height: 120,
-    marginBottom: 30
+    marginBottom: 30,
   },
   titulo: {
     fontSize: 40,
-    fontWeight: 'bold',
-    color: 'white',
-    marginBottom: 10
+    fontWeight: "bold",
+    color: "white",
+    marginBottom: 10,
   },
-
 });
-
